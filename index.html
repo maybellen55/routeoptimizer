@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Optimizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🗺 Route Optimizer</h1>
+    <p class="sub">
+        出発地点から最適な巡回ルートを作成します
+    </p>
+
+    <!-- 出発地点 -->
+
+    <section class="card">
+
+        <h2>出発地点</h2>
+
+        <input
+            type="text"
+            id="start"
+            placeholder="例：下高井戸">
+
+    </section>
+
+    <!-- 目的地 -->
+
+    <section class="card">
+
+        <div class="title-row">
+
+            <h2>目的地</h2>
+
+            <button id="addStop">
+                ＋追加
+            </button>
+
+        </div>
+
+        <div id="destinations">
+
+            <input
+                class="destination"
+                type="text"
+                placeholder="店名・住所">
+
+        </div>
+
+    </section>
+
+    <!-- オプション -->
+
+    <section class="card">
+
+        <label>
+
+            <input
+                type="checkbox"
+                id="returnHome"
+                checked>
+
+            出発地点へ戻る
+
+        </label>
+
+    </section>
+
+    <!-- ボタン -->
+
+    <section class="buttons">
+
+        <button id="optimize">
+            🚗 最適化する
+        </button>
+
+    </section>
+
+    <!-- 結果 -->
+
+    <section class="card">
+
+        <h2>最適ルート</h2>
+
+        <ol id="result">
+
+            <li>ここに結果が表示されます</li>
+
+        </ol>
+
+    </section>
+
+    <!-- Google Map -->
+
+    <section class="buttons">
+
+        <button
+            id="openGoogle"
+            disabled>
+
+            Googleマップで開く
+
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
